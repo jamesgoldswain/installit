@@ -12,7 +12,6 @@ const url = require('url');
 let mainWindow;
 
 function createWindow() {
-    debugger
     // Create the browser window.
     mainWindow = new BrowserWindow({width: 800, height: 600});
 
