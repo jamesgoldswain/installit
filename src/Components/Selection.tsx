@@ -1,11 +1,14 @@
 import * as React from 'react'
+import EveryoneComponent from './All';
+import DeveloperComponent from './Developer';
 
 export interface ISelectedItemProps {
-    item: string
+    item: string,
+    
 }
 
 const SelectionComponent = ({ item }: ISelectedItemProps) => (
-    <div>{item}</div>
+     item === 'developer' ? <DeveloperComponent /> : <EveryoneComponent /> 
 )
   
 export default SelectionComponent

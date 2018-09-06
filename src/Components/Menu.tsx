@@ -6,7 +6,7 @@ export interface IOptionsProps {
 }
 
 const MenuComponent = ({ options, onSelectedItem }: IOptionsProps) => (
-    <div>{ options.map((option) => <li key={option}><input type='radio' name='option' value={option} onChange={ onSelectedItem } />{option}</li>)}</div>
+    <ul>{ options.map((option) => <li key={option}><input type='radio' name='option' value={option} onChange={ onSelectedItem } />{option}</li>)}</ul>
 )
   
 export default MenuComponent
