@@ -1,30 +1,22 @@
 import * as React from 'react';
 import './App.css';
 
-import MenuComponent from './Components/Menu'
 import WelcomeComponent from './Components/Welcome'
 
-class App extends React.Component {
-
-  public selectOption = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // tslint:disable-next-line:no-console
-    console.log(event.target.value)
-  }
+export default class App extends React.Component {
 
   public render() {
-    const options: string[] = [ 'One', 'Two' ]
-  
+
     return (
       <div className="App">
-        
+       
         <header className="App-header">
-          <WelcomeComponent />
+          <h1>Install It</h1>
         </header>
        
-        <MenuComponent options={options} onSelectedItem={this.selectOption} />
+        <WelcomeComponent />
+
       </div>
     );
   }
 }
-
-export default App;
