@@ -5,7 +5,7 @@ export interface IKeynotesProps {
 }
 
 const WelcomeComponent = () => (
-    <div>hello</div>
+    <h1>Welcome to the installer, select an item to continue</h1>
 )
 
 export default WelcomeComponent

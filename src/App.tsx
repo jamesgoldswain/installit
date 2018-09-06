@@ -1,20 +1,27 @@
 import * as React from 'react';
 import './App.css';
 
-import WelcomeComponent from './Components/Welcome';
+import MenuComponent from './Components/Menu'
+import WelcomeComponent from './Components/Welcome'
 
 class App extends React.Component {
+
+  public selectOption = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // tslint:disable-next-line:no-console
+    console.log(event.target.value)
+  }
+
   public render() {
+    const options: string[] = [ 'One', 'Two' ]
+  
     return (
       <div className="App">
         
         <header className="App-header">
           <WelcomeComponent />
-          <h1 className="App-title">Welcome to Electron/React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+       
+        <MenuComponent options={options} onSelectedItem={this.selectOption} />
       </div>
     );
   }
